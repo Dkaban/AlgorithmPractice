@@ -1,3 +1,6 @@
+#Author: Dustin Kaban
+#Date: February 10th, 2020
+
 #Random import is only to input random numbers into the function for testing
 import random
 
