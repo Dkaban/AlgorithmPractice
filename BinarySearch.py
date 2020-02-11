@@ -12,26 +12,17 @@ def BinarySearch(array,val):
     if (val > len(array)):
         print("Value of " + str(val) + " not found")
         return
-    #we set the array to start at 1 because if we started at 0 we'd have issues with the (min+max) calculation
     min = 1
-    #Because we start at 1, we need to go the length of the array +1 to contain all items
     max = len(array)+1
-    #We start with an initial guess in the middle of the array
-    guess = int(min+max/2)
     while(min <= max):
+        guess = int((min+max)/2)
         if(guess == val):
             print("Success! Array Contains Value of " + str(guess))
             return guess
         elif(val > guess):
-            #If the value inputted is greater than the guess, we want to set the min as guess
-            #and then set guess as the average, then check again
             min = guess
-            guess = int((max+guess)/2)
         else:
-            #if teh value inputted is less than the guess, we want to set the max as guess
-            #and then set guess as the average, then check again
             max = guess
-            guess = int((min+guess)/2)
 
     print("Value Not Found")
     return 0
