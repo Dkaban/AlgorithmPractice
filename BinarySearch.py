@@ -18,8 +18,7 @@ def BinarySearch(array,val):
     max = len(array)+1
     #We start with an initial guess in the middle of the array
     guess = int(min+max/2)
-    count = 0;
-    while(count < len(array)):
+    while(min <= max):
         if(guess == val):
             print("Success! Array Contains Value of " + str(guess))
             return guess
@@ -33,7 +32,6 @@ def BinarySearch(array,val):
             #and then set guess as the average, then check again
             max = guess
             guess = int((min+guess)/2)
-        count+=1
 
     print("Value Not Found")
     return 0
