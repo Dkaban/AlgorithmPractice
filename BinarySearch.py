@@ -20,9 +20,9 @@ def BinarySearch(array,val):
             print("Success! Array Contains Value of " + str(guess))
             return guess
         elif(val > guess):
-            min = guess
+            min = guess+1
         else:
-            max = guess
+            max = guess-1
 
     print("Value Not Found")
     return 0
